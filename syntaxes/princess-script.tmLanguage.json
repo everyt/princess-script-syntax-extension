@@ -15,7 +15,6 @@
         { "include": "#scene" },
         { "include": "#end" },
         { "include": "#stage" },
-        { "include": "#options" },
         { "include": "#title" },
         { "include": "#effect" }
       ]
@@ -49,15 +48,7 @@
       "patterns": [
         {
           "name": "support.function.princess",
-          "match": "^\\s*(stage|script)\\b"
-        }
-      ]
-    },
-    "options": {
-      "patterns": [
-        {
-          "name": "support.function.princess",
-          "match": "^\\s*(options)\\b"
+          "match": "^\\s*(stage|script|options|close)\\b"
         }
       ]
     },
