@@ -1,0 +1,48 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["source.princess.script.comment"],
+        "settings": {
+          "foreground": "#CCC"
+        }
+      },
+      {
+        "scope": ["source.princess.script.scene"],
+        "settings": {
+          "foreground": "#FFC0CB"
+        }
+      },
+      {
+        "scope": ["source.princess.script.end"],
+        "settings": {
+          "foreground": "#FFC0CB"
+        }
+      },
+      {
+        "scope": ["source.princess.script.stage"],
+        "settings": {
+          "foreground": "#f0768b"
+        }
+      },
+      {
+        "scope": ["source.princess.script.stage.attr"],
+        "settings": {
+          "foreground": "#67d1ff"
+        }
+      },
+      {
+        "scope": ["source.princess.script.script"],
+        "settings": {
+          "foreground": "#f29886"
+        }
+      },
+      {
+        "scope": ["source.princess.script.script.attr"],
+        "settings": {
+          "foreground": "#67adff"
+        }
+      }
+    ]
+  }
+}

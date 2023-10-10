@@ -3,6 +3,10 @@
   "displayName": "Princess Script",
   "description": "Princess Script Syntax HighLighter.",
   "icon": "icon.png",
+  "repository": {
+    "url": "https:/https://github.com/everyt/princess-script-syntax-extension",
+    "type": "git"
+  },
   "version": "0.0.1",
   "publisher": "EveryHongCha(Everyt)",
   "categories": [
@@ -31,64 +35,18 @@
           ".prss",
           ".princess"
         ],
-        "configuration": "./language-configuration.json"
+        "icon": {
+          "dark": "icon.png",
+          "light": "icon.png"
+        }
       }
     ],
     "grammars": [
       {
         "language": "princess-script",
         "scopeName": "source.princess",
-        "path": "./syntaxes/princess-script-syntax.tmLanguage.json"
+        "path": "princess-script-syntax.tmLanguage.json"
       }
-    ],
-    "configurationDefaults": {
-      "editor.insertSpaces": true,
-      "editor.tokenColorCustomizations": {
-        "textMateRules": [
-          {
-            "scope": [
-              "source.princess.scene",
-              "source.princess.end"
-            ],
-            "settings": {
-              "foreground": "#e393b9"
-            }
-          },
-          {
-            "scope": "source.princess.stage",
-            "settings": {
-              "foreground": "#e3d593"
-            }
-          },
-          {
-            "scope": [
-              "source.princess.stage-title",
-              "source.princess.stage-background",
-              "source.princess.stage-bgm",
-              "source.princess.stage-ambience"
-            ],
-            "settings": {
-              "foreground": "#93cde3"
-            }
-          },
-          {
-            "scope": "source.princess.script",
-            "settings": {
-              "foreground": "#93e3ca"
-            }
-          },
-          {
-            "scope": [
-              "source.princess.option",
-              "source.princess.change",
-              "source.princess.effect"
-            ],
-            "settings": {
-              "foreground": "#34b7b5"
-            }
-          }
-        ]
-      }
-    }
+    ]
   }
 }
