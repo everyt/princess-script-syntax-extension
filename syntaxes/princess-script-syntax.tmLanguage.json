@@ -1,0 +1,80 @@
+{
+  "patterns": [
+    {
+      "name": "scene",
+      "begin": "\\bscene\\b",
+      "end": ":\\n",
+      "patterns": [
+        {
+          "name": "stage",
+          "begin": "\\bstage\\b:",
+          "end": "\\n",
+          "patterns": [
+            {
+              "name": "stage-title",
+              "begin": "\\btitle\\b:",
+              "end": "\\n"
+            },
+            {
+              "name": "stage-background",
+              "begin": "\\bbackground\\b:",
+              "end": "\\n"
+            },
+            {
+              "name": "stage-bgm",
+              "begin": "\\bbgm\\b:",
+              "end": "\\n"
+            },
+            {
+              "name": "stage-ambience",
+              "begin": "\\bambience\\b:",
+              "end": "\\n"
+            }
+          ]
+        },
+        {
+          "name": "script",
+          "begin": "\\bscript\\b:",
+          "end": "\\bend\\b",
+          "patterns": [
+            {
+              "name": "character",
+              "match": "\\w+:"
+            },
+            {
+              "name": "dialogue",
+              "begin": "\\w+:",
+              "end": "\\n"
+            },
+            {
+              "name": "option",
+              "match": "\\boptions\\b"
+            },
+            {
+              "name": "option-choice",
+              "begin": "\\b\\w+\\b:",
+              "end": "\\n"
+            },
+            {
+              "name": "option-close",
+              "match": "\\bclose\\b"
+            },
+            {
+              "name": "change",
+              "begin": "\\bchange\\b"
+            },
+            {
+              "name": "effect",
+              "match": "\\beffect\\b:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "end",
+      "match": "\\bend\\b"
+    }
+  ],
+  "uuid": "cHJpbmNlc3Mtc2NyaXB0LXN5bnRheC1leHRlbnNpb24="
+}
