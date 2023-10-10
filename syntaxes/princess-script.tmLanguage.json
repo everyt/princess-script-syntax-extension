@@ -2,10 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Princess Script",
   "scopeName": "source.princess",
-  "fileTypes": [
-    "prss",
-    "princess"
-  ],
+  "fileTypes": ["princess"],
   "patterns": [
     {
       "include": "#expression"
@@ -18,13 +15,15 @@
         { "include": "#scene" },
         { "include": "#end" },
         { "include": "#stage" },
-        { "include": "#title" }
+        { "include": "#options" },
+        { "include": "#title" },
+        { "include": "#effect" }
       ]
     },
     "comment": {
       "patterns": [
         {
-          "name": "punctuation.definition.comment.princess",
+          "name": "comment.princess",
           "begin": "//",
           "end": "\\n"
         }
@@ -33,36 +32,32 @@
     "scene": {
       "patterns": [
         {
-          "name": "markup.deleted.diff.princess",
-          "begin": "\\b(scene)\\b(\\w*)",
-          "beginCapture": {
-            "0": {
-              "name": "variable.other.object.property.princess"
-            }
-          },
-          "end": ":"
+          "name": "invalid.princess",
+          "match": "^(scene)\\b"
         }
       ]
     },
     "end": {
       "patterns": [
         {
-          "name": "markup.deleted.diff.princess",
-          "match": "\\b(end)\\b"
+          "name": "invalid.princess",
+          "match": "^(end)\\b"
         }
       ]
     },
     "stage": {
       "patterns": [
         {
-          "name": "markup.changed.princess",
-          "begin": "\\b(stage|script)\\b(\\w*)",
-          "beginCapture": {
-            "0": {
-              "name": "variable.other.object.property.princess"
-            }
-          },
-          "end": ":"
+          "name": "support.function.princess",
+          "match": "^\\s*(stage|script)\\b"
+        }
+      ]
+    },
+    "options": {
+      "patterns": [
+        {
+          "name": "support.function.princess",
+          "match": "^\\s*(options)\\b"
         }
       ]
     },
@@ -70,13 +65,15 @@
       "patterns": [
         {
           "name": "entity.name.tag.doctype.princess",
-          "begin": "\\b(title|background|bgm|ambience|effect|options|change)\\b:(\\w*)",
-          "beginCapture": {
-            "0": {
-              "name": "variable.other.object.property.princess"
-            }
-          },
-          "end": "\\n"
+          "match": "^\\s*(title|background|bgm|ambience)\\b"
+        }
+      ]
+    },
+    "effect": {
+      "patterns": [
+        {
+          "name": "support.constant.meta.property-value.princess",
+          "match": "^\\s*(effect|change)\\b"
         }
       ]
     }
