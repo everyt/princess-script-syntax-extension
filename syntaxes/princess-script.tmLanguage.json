@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Princess Script",
+  "scopeName": "source.princess",
+  "fileTypes": [
+    "prss",
+    "princess"
+  ],
+  "patterns": [
+    {
+      "include": "#expression"
+    }
+  ],
+  "repository": {
+    "expression": {
+      "patterns": [
+        { "include": "#comment" },
+        { "include": "#scene" },
+        { "include": "#end" },
+        { "include": "#stage" },
+        { "include": "#title" }
+      ]
+    },
+    "comment": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.comment.princess",
+          "begin": "//",
+          "end": "\\n"
+        }
+      ]
+    },
+    "scene": {
+      "patterns": [
+        {
+          "name": "markup.deleted.diff.princess",
+          "begin": "\\b(scene)\\b(\\w*)",
+          "beginCapture": {
+            "0": {
+              "name": "variable.other.object.property.princess"
+            }
+          },
+          "end": ":"
+        }
+      ]
+    },
+    "end": {
+      "patterns": [
+        {
+          "name": "markup.deleted.diff.princess",
+          "match": "\\b(end)\\b"
+        }
+      ]
+    },
+    "stage": {
+      "patterns": [
+        {
+          "name": "markup.changed.princess",
+          "begin": "\\b(stage|script)\\b(\\w*)",
+          "beginCapture": {
+            "0": {
+              "name": "variable.other.object.property.princess"
+            }
+          },
+          "end": ":"
+        }
+      ]
+    },
+    "title": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.doctype.princess",
+          "begin": "\\b(title|background|bgm|ambience|effect|options|change)\\b:(\\w*)",
+          "beginCapture": {
+            "0": {
+              "name": "variable.other.object.property.princess"
+            }
+          },
+          "end": "\\n"
+        }
+      ]
+    }
+  }
+}
