@@ -1,9 +1,17 @@
 # Change Log
 
-All notable changes to the "princess-script-syntax-extension" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+## [0.0.1]
 
 - Initial release
+
+## [0.0.12]
+
+- Bug fixes
+
+## [0.1.0]
+
+- Enter into orbit
+
+## [0.1.2]
+
+- Regex Improvement
