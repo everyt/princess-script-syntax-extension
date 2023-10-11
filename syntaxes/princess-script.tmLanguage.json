@@ -5,68 +5,46 @@
   "fileTypes": ["princess"],
   "patterns": [
     {
-      "include": "#expression"
+      "name": "comment.princess",
+      "begin": "//",
+      "end": "\\n"
+    },
+    {
+      "name": "comment.princess",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "invalid.princess",
+      "match": "^(scene)\\s*\\S*(?=:)"
+    },
+    {
+      "name": "invalid.princess",
+      "match": "^(end)\\b"
+    },
+    {
+      "name": "support.function.princess",
+      "match": "^\\s+(?<=(options|close|change|effect|title|background|bgm|ambience))\\S+(?=:)"
+    },
+    {
+      "name": "support.function.princess",
+      "match": "^\\s+(stage|script)\\s*\\S*(?=:)"
+    },
+    {
+      "name": "entity.name.tag.doctype.princess",
+      "match": "^\\s+(options|close|change|effect)(?!:)"
+    },
+    {
+      "name": "entity.name.tag.doctype.princess",
+      "match": "^\\s+(title|background|bgm|ambience)(?=:)"
+    },
+    {
+      "name": "support.function.princess",
+      "match": "^(const)\\s*\\S*(?=:)"
+    },
+    {
+      "name": "invalid.illegal.princess",
+      "match": "^\\s+\\S+(?=:)"
     }
-  ],
-  "repository": {
-    "expression": {
-      "patterns": [
-        { "include": "#comment" },
-        { "include": "#scene" },
-        { "include": "#end" },
-        { "include": "#stage" },
-        { "include": "#title" },
-        { "include": "#effect" }
-      ]
-    },
-    "comment": {
-      "patterns": [
-        {
-          "name": "comment.princess",
-          "begin": "//",
-          "end": "\\n"
-        }
-      ]
-    },
-    "scene": {
-      "patterns": [
-        {
-          "name": "invalid.princess",
-          "match": "^(scene)\\b"
-        }
-      ]
-    },
-    "end": {
-      "patterns": [
-        {
-          "name": "invalid.princess",
-          "match": "^(end)\\b"
-        }
-      ]
-    },
-    "stage": {
-      "patterns": [
-        {
-          "name": "support.function.princess",
-          "match": "^\\s*(stage|script|options|close)\\b"
-        }
-      ]
-    },
-    "title": {
-      "patterns": [
-        {
-          "name": "entity.name.tag.doctype.princess",
-          "match": "^\\s*(title|background|bgm|ambience)\\b"
-        }
-      ]
-    },
-    "effect": {
-      "patterns": [
-        {
-          "name": "support.constant.meta.property-value.princess",
-          "match": "^\\s*(effect|change)\\b"
-        }
-      ]
-    }
-  }
+  ]
 }
