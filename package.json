@@ -2,8 +2,8 @@
   "name": "princess-script-syntax-hightlighter",
   "displayName": "Princess Script",
   "description": "Princess Script Syntax HighLighter.",
-  "version": "0.0.11",
-  "publisher": "EveryHongCha",
+  "version": "0.1.0",
+  "publisher": "Everyt",
   "icon": "icon.png",
   "repository": {
     "url": "https://github.com/everyt/princess-script-syntax-extension",
@@ -36,8 +36,7 @@
         "icon": {
           "dark": "icon.png",
           "light": "icon.png"
-        },
-        "configuration": "./language-configuration.json"
+        }
       }
     ],
     "grammars": [
