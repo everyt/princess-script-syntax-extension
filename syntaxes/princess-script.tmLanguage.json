@@ -15,27 +15,27 @@
       "end": "\\*/"
     },
     {
-      "name": "invalid.princess",
+      "name": "bold.princess",
       "match": "^(장면/)"
     },
     {
-      "name": "support.function.princess",
+      "name": "string.princess",
       "match": "^\\s+(?<=(효과|선택지|종료|타이틀|배경화면|배경음악|환경음|스타일))\\S+(?=:)"
     },
     {
-      "name": "support.function.princess",
+      "name": "string.princess",
       "match": "^\\s+(무대|대화|변수)\\s*\\S*(?=/)"
     },
     {
-      "name": "entity.name.tag.doctype.princess",
+      "name": "string.regexp.princess",
       "match": "^\\s+(효과|선택지|종료)(?!:)"
     },
     {
-      "name": "entity.name.tag.doctype.princess",
+      "name": "string.regexp.princess",
       "match": "^\\s+(타이틀|배경화면|배경음악|환경음|스타일)(?=:)"
     },
     {
-      "name": "invalid.illegal.princess",
+      "name": "entity.name.tag.css.princess",
       "match": "^\\s+\\S+(?=:)"
     }
   ]
