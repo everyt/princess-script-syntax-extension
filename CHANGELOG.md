@@ -15,3 +15,7 @@
 ## [0.1.2]
 
 - Regex Improvement
+
+## [0.2.0]
+
+- Apply new grammar to support variables
