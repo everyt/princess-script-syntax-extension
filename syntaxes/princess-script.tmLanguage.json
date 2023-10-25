@@ -24,7 +24,7 @@
     },
     {
       "name": "support.function.princess",
-      "match": "^\\s+(무대|대화)\\s*\\S*(?=/)"
+      "match": "^\\s+(무대|대화|변수)\\s*\\S*(?=/)"
     },
     {
       "name": "entity.name.tag.doctype.princess",
