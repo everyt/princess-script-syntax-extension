@@ -33,6 +33,7 @@
         "extensions": [
           ".princess"
         ],
+        "configuration": "./syntaxes/language-configuration.json",
         "icon": {
           "dark": "icon.png",
           "light": "icon.png"
