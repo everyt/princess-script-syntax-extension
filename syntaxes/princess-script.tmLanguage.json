@@ -16,7 +16,7 @@
     },
     {
       "name": "bold.princess",
-      "match": "^(장면/)"
+      "match": "^(장면/|!@#$/)"
     },
     {
       "name": "string.princess",
