@@ -7,7 +7,7 @@
     {
       "name": "comment.princess",
       "begin": "//",
-      "end": "\\n"
+      "end": "$"
     },
     {
       "name": "comment.princess",
@@ -16,27 +16,78 @@
     },
     {
       "name": "bold.princess",
-      "match": "^(장면/|!@#$/)"
+      "match": "^(장면|끝)(?=/)"
     },
     {
-      "name": "string.princess",
-      "match": "^\\s+(?<=(효과|선택지|종료|타이틀|배경화면|배경음악|환경음|스타일))\\S+(?=:)"
-    },
-    {
-      "name": "string.princess",
+      "name": "keyword.control.princess",
       "match": "^\\s+(무대|대화|변수)\\s*\\S*(?=/)"
     },
     {
-      "name": "string.regexp.princess",
-      "match": "^\\s+(효과|선택지|종료)(?!:)"
+      "name": "variable.other.property.princess",
+      "match": "^\\s+(타이틀|배경화면|배경음악|환경음|스타일)\\s*(?=:)"
     },
     {
       "name": "string.regexp.princess",
-      "match": "^\\s+(타이틀|배경화면|배경음악|환경음|스타일)(?=:)"
+      "match": "^\\s+'(.*?)'\\s*(?=:)"
     },
     {
-      "name": "entity.name.tag.css.princess",
-      "match": "^\\s+\\S+(?=:)"
+      "name": "string.regexp.princess",
+      "match": "^\\s+`(.*?)`\\s*(?=:)"
+    },
+    {
+      "name": "string.regexp.princess",
+      "match": "^\\s+\"(.*?)\"\\s*(?=:)"
+    },
+    {
+      "name": "string.princess",
+      "match": "^\\s+(?<!\"|'|`)\\S+(?=:)"
+    },
+    {
+      "name": "string.regexp.princess",
+      "begin": "^\\s+(효과|선택지|종료)\\s*'",
+      "end": "'\\s*(?=;)",
+      "beginCaptures": {
+        "1": { "name": "variable.other.property.princess" }
+      }
+    },
+    {
+      "name": "string.regexp.princess",
+      "begin": "^\\s+(효과|선택지|종료)\\s*`",
+      "end": "`\\s*(?=;)",
+      "beginCaptures": {
+        "1": { "name": "variable.other.property.princess" }
+      }
+    },
+    {
+      "name": "string.regexp.princess",
+      "begin": "^\\s+(효과|선택지|종료)\\s*\"",
+      "end": "\"\\s*(?=;)",
+      "beginCaptures": {
+        "1": { "name": "variable.other.property.princess" }
+      }
+    },
+    {
+      "name": "string.princess",
+      "begin": "^\\s+(효과|선택지|종료)\\s*",
+      "end": "\\s*(?=;)",
+      "beginCaptures": {
+        "1": { "name": "variable.other.property.princess" }
+      }
+    },
+    {
+      "name": "string.quoted.double",
+      "begin": "'",
+      "end": "'"
+    },
+    {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "string.quoted.double",
+      "begin": "`",
+      "end": "`"
     }
   ]
 }
