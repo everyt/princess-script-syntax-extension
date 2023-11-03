@@ -44,7 +44,7 @@
     },
     {
       "name": "string.regexp.princess",
-      "begin": "^\\s+(효과|선택지|종료)\\s*'",
+      "begin": "^\\s+(효과|선택지|종료|변경|점프)\\s*'",
       "end": "'\\s*(?=;)",
       "beginCaptures": {
         "1": { "name": "variable.other.property.princess" }
@@ -52,7 +52,7 @@
     },
     {
       "name": "string.regexp.princess",
-      "begin": "^\\s+(효과|선택지|종료)\\s*`",
+      "begin": "^\\s+(효과|선택지|종료|변경|점프)\\s*`",
       "end": "`\\s*(?=;)",
       "beginCaptures": {
         "1": { "name": "variable.other.property.princess" }
@@ -60,7 +60,7 @@
     },
     {
       "name": "string.regexp.princess",
-      "begin": "^\\s+(효과|선택지|종료)\\s*\"",
+      "begin": "^\\s+(효과|선택지|종료|변경|점프)\\s*\"",
       "end": "\"\\s*(?=;)",
       "beginCaptures": {
         "1": { "name": "variable.other.property.princess" }
@@ -68,7 +68,7 @@
     },
     {
       "name": "string.princess",
-      "begin": "^\\s+(효과|선택지|종료)\\s*",
+      "begin": "^\\s+(효과|선택지|종료|변경|점프)\\s*",
       "end": "\\s*(?=;)",
       "beginCaptures": {
         "1": { "name": "variable.other.property.princess" }
